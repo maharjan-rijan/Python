@@ -1,4 +1,4 @@
-# Data types => Numberic datatype, Sqquence datatype, Bollen datatype, Mapping datatype, Binary datatype,
+# Data types => Numberic datatype, Sequence datatype, Bollen datatype, Mapping datatype, Binary datatype,
                 #none datatype, set datatype
 num_1 = complex(4,5)
 num_2 = complex(3,7)

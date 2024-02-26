@@ -1,3 +1,4 @@
+# Variable Type
 a = float(4)
 b = 2.4
 c = "Apple"
