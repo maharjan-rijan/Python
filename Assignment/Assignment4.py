@@ -5,5 +5,10 @@ discount = 0
 
 if (amount > 1000):
     discount = amount*10/100
-print("Discount = ", discount)
-print("Total amount to be paid = ", int(amount - discount))
+    print("Discount = ", discount)
+    print("Total amount to be paid = ", int(amount - discount))
+else:
+    discount = amount*5/100
+    print("Discount = ", discount)
+    print("Total amount to be paid = ", int(amount - discount))
+    
