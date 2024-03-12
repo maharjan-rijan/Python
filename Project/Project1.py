@@ -4,7 +4,7 @@
 # 2. Make as Completed
 # 3. View task
 # 4. Remove task
-# 5. Exist
+# 5. Exit
 #========================================================================================================================#
 #initialize empty todos to store todo items
 toDoList = [] 
@@ -14,7 +14,7 @@ while True:
     print("2. Mark as completed")
     print("3. View Tasks")
     print("4. Remove Task")
-    print("5. Exist\n")
+    print("5. Exit\n")
     
     choice = input("Enter your choice (1-5):")
     
@@ -25,4 +25,15 @@ while True:
             'is_completed' : False,
         }
         toDoList.append(task)
-        print("Task Added Succesfully")
+        print("Task Added Succesfully.")
+    elif choice == '2':
+        ...
+    elif choice == '3':
+        for index, task in enumerate(toDoList):
+            print(f"{index}.{task['task_name']} - {'Completed' if task['is_completed'] else 'Not Completed'} ")
+        # for task in toDoList:
+        #     for key,value in task.items():
+        #         print(value)
+    elif choice == '5':
+        print("Program Exit.")
+        break
