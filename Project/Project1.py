@@ -27,13 +27,16 @@ while True:
         toDoList.append(task)
         print("Task Added Succesfully.")
     elif choice == '2':
-        ...
+        print(f"{index}.{task['task_name']}")
     elif choice == '3':
         for index, task in enumerate(toDoList):
             print(f"{index}.{task['task_name']} - {'Completed' if task['is_completed'] else 'Not Completed'} ")
         # for task in toDoList:
         #     for key,value in task.items():
         #         print(value)
+    elif choice == '4':
+        toDoList.remove(task)
+        print("Task Deleted Succesfully.")
     elif choice == '5':
         print("Program Exit.")
         break
