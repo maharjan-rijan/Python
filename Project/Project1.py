@@ -27,16 +27,22 @@ while True:
         toDoList.append(task)
         print("Task Added Succesfully.")
     elif choice == '2':
-        print(f"{index}.{task['task_name']}")
+        task_index = int(input("Enter Task index:"))
+        toDo_item = toDoList[task_index]
+        toDo_item['is_completed'] = True
     elif choice == '3':
-        for index, task in enumerate(toDoList):
-            print(f"{index}.{task['task_name']} - {'Completed' if task['is_completed'] else 'Not Completed'} ")
-        # for task in toDoList:
-        #     for key,value in task.items():
-        #         print(value)
+        if len(toDoList > 0):
+            for index, task in enumerate(toDoList):
+                print(f"{index+1}.{task['task_name']} - {'Completed ✔️' if task['is_completed'] else 'Not Completed ❌'} ")
+        else:
+            print("You haven't added task yet.")
     elif choice == '4':
-        toDoList.remove(task)
-        print("Task Deleted Succesfully.")
+        task_index = int(input("Enter Task index:"))
+        if len(toDoList) < task_index:
+            print('Invalid task range')
+        else:
+            toDo_item = toDoList.pop(task_index)
+            print("Task Removed Succesfully.")
     elif choice == '5':
         print("Program Exit.")
         break
