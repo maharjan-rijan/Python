@@ -3,6 +3,9 @@
 # user, calculate its value. To calculate and print its value,create function for 
 # each operations. Use keyword argument to call the function.
 
+
+fn = int(input("Input The first number:"))
+sn = int(input("Input The second number:"))
 def numberCalculate(num1, num2)->None:
     choice = input("Enter any Operation:")
     if choice == "+":
@@ -19,4 +22,4 @@ def numberCalculate(num1, num2)->None:
         print(f"The division is {division}")
     else:
         print("Arithmetic Operation Cannot performe.")
-numberCalculate(num1 = 4, num2 = 6)
+numberCalculate(num1 = fn, num2 = sn)
